@@ -7,6 +7,16 @@ class Categorias(models.TextChoices):
     ES = 'ES', 'Esportes'
 
 # Create your models here.
+
+class Contact(models.Model):
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    message= models.TextField()
+
+    def __str__(self):
+        return self.name
+
+    
 class Post(models.Model):
     title = models.CharField(max_length=100)
     sub_title = models.CharField(max_length=200)

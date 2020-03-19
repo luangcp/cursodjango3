@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE HTML>
@@ -30,75 +31,11 @@
 
 				<!-- One -->
 					<section id="one">
-						<header class="major">
-							<h2>Luan Gabriel Cardoso Pinheiro<br />
-							Estudante de Engenharia de Contole e Automação.</h2>
-						</header>
-						<p>Estudante de Engenharia de Controle e Automação, com ênfase em Robótica, Mecatrônica e Automação. Desenvolvimento de trabalhos tecnológicos, projetos de pesquisa e programação em C/C++, Python e Java. Manutenção de softwares e de circuitos elétricos, protótipos envolvendo placas de prototipagem como Arduino e Raspberry, automação de processos e Internet Of Things (IoT) voltados a Industria 4.0 e projetos voltados a tecnologia.</p>
-						<ul class="actions">
-							<li><a href="https://www.linkedin.com/in/luan-pinheiro-61207417b/" class="button">Learn More</a></li>
-						</ul>
+						<h1>Obrigado, {{ name_contact }}, seu contato foi recebido!!</h1>
+                        <a href="/blog">Voltar para home</a>
 					</section>
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Posts</h2>
-						<div class="row">
-							{% for post in posts %}
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="{{ post.imagem.url }}" class="image fit thumb"><img src="{{ post.imagem.url }}" alt="" /></a>
-									<h3>{{ post.title }}</h3>
-									<p>{{ post.sub_title }}</p>
-									<span>{{ post.get_category_label }}</span>
-									<ul class="actions">
-										<li><a href="{% url 'post_detail' post.id %}" class="button">Read more</a></li>
-									</ul>
-								</article>
-							{% endfor %}
-							
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
-					</section>
 
-				<!-- Three -->
-					<section id="three">
-						<h2>Get In Touch</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="{% url 'save_form' %}">
-									{% csrf_token %}
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-										<input type="submit" value="Send Message" />									
-								</form>
-								
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
 
 				<!-- Four -->
 				<!--
